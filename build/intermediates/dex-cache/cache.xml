@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_3bad3dc3fc82a48d64c3985c888641d76640193e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.android/build-cache/ad325925bd64b79978cc6d3dd1fdd2490b2064fa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bc149c80535a76d2ab2ac4dda117ce4d415880c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="18006c2e17887e0b34c40eab326d86bc9a9cfccd">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_56b9e3a1e2e516a5fccfce35528ad263fdf8535c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.0.1_00512e54bf1dd603f9cd8020b6732491a6e81264/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Shared/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.3.0_369432bf935a0a7893beb767365a7a8d94fd0aba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.android/build-cache/7cdc5c9eca142d2f820f8dc94cd892b2c4d648bc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c7990ee1517105cd603c6a26a0c1a3c9a4f21fc7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.android/build-cache/1ecba28ceaa542cbbc06deebcca62a09bf80583e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1ccdc84cbc2cd9e3008d00f746c35b8e2b966d0b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.android/build-cache/cf049057f8a96b5b0e94f0b95d1bfa6695d2ed82/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_930170af74ca883cdbae93d328e68ced92390312/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_dd55f31b1cc3b1295f796f6e8aeda894fc39b7e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.android/build-cache/ea503db1d05786a2543787778e8f8d5000d0a0a7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bf4006949d6b93c8c174c63ba73f7416f0e71ba5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_946dfc88ed92643a93cdf345a84ef4f9657653c2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Guest/.android/build-cache/ad325925bd64b79978cc6d3dd1fdd2490b2064fa/output/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/Guest/Desktop/Galacticon-Starter/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.3.0_dc7f416a2e14d11867c3869d07f192a1e3c64b57/classes.dex" />
+    </item>
+
+</items>
