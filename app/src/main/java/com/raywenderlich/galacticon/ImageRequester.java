@@ -40,7 +40,9 @@ import okhttp3.Response;
 
 public class ImageRequester {
 
-  // This is voodoo magic.
+  // Tricky...implementing a new interface so any listening activities
+  // are guaranteed to have the response method
+
   public interface ImageRequesterResponse {
     void receivedNewPhoto(Photo newPhoto);
   }
@@ -80,6 +82,7 @@ public class ImageRequester {
     mLoadingData = true;
 
     mClient.newCall(request).enqueue(new Callback() {
+
       @Override
       public void onFailure(Call call, IOException e) {
         mLoadingData = false;
@@ -97,7 +100,7 @@ public class ImageRequester {
           if (!photoJSON.getString(MEDIA_TYPE_KEY).equals(MEDIA_TYPE_VIDEO_VALUE)) {
             Photo receivedPhoto = new Photo(photoJSON);
 
-            //This is magic to me.  This is where the new photo data is passed back to the Activity
+            //This is where the new photo data is passed back to the Activity
             mResponseListener.receivedNewPhoto(receivedPhoto);
             mLoadingData = false;
           } else {

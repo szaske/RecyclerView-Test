@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
     mRecyclerView.setAdapter(mAdapter); //this attaches your empty list to the view
     setRecyclerViewScrollListener(); // This sets the scroll listener
 
+    //This is the object that can fetch more content
     mImageRequester = new ImageRequester(this);
 
   }
