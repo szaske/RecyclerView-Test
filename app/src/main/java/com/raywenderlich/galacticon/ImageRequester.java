@@ -40,6 +40,7 @@ import okhttp3.Response;
 
 public class ImageRequester {
 
+  // This is voodoo magic.
   public interface ImageRequesterResponse {
     void receivedNewPhoto(Photo newPhoto);
   }
@@ -95,6 +96,8 @@ public class ImageRequester {
 
           if (!photoJSON.getString(MEDIA_TYPE_KEY).equals(MEDIA_TYPE_VIDEO_VALUE)) {
             Photo receivedPhoto = new Photo(photoJSON);
+
+            //This is magic to me.  This is where the new photo data is passed back to the Activity
             mResponseListener.receivedNewPhoto(receivedPhoto);
             mLoadingData = false;
           } else {

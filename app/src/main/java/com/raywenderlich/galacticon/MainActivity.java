@@ -64,10 +64,9 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
     mPhotosList = new ArrayList<>(); // An empty arrayList for the items in your list
     mAdapter = new RecyclerAdapter(mPhotosList);
     mRecyclerView.setAdapter(mAdapter); //this attaches your empty list to the view
+    setRecyclerViewScrollListener(); // This sets the scroll listener
 
     mImageRequester = new ImageRequester(this);
-
-
 
   }
 
@@ -80,6 +79,26 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
       requestPhoto();
     }
   }
+
+  // This method asks the layoutManager what's the last visible position
+  private int getLastVisibleItemPosition() {
+    return mLinearLayoutManager.findLastVisibleItemPosition();
+  }
+
+  // This creates a Scroll Listener to the RecyclerView
+  private void setRecyclerViewScrollListener() {
+    mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+      @Override
+      public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+        super.onScrollStateChanged(recyclerView, newState);
+        int totalItemCount = mRecyclerView.getLayoutManager().getItemCount();
+        if (!mImageRequester.isLoadingData() && totalItemCount == getLastVisibleItemPosition() + 1) {
+          requestPhoto();
+        }
+      }
+    });
+  }
+
 
   private void requestPhoto() {
 
