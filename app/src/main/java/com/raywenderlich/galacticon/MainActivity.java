@@ -37,8 +37,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ImageRequester.ImageRequesterResponse {
-
-  private ArrayList<Photo> mPhotosList;
+  // My variables
+  private RecyclerView mRecyclerView; // To connect to my view object
+  private LinearLayoutManager mLinearLayoutManager; // This tracks what views are where in the Rview
+  private ArrayList<Photo> mPhotosList; // What's being tracked
   private ImageRequester mImageRequester;
 
   @Override
@@ -53,9 +55,14 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    //  Attaching the Rview and assigning a layoutManager
+    mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+    mLinearLayoutManager = new LinearLayoutManager(this);
+    mRecyclerView.setLayoutManager(mLinearLayoutManager);
 
     mPhotosList = new ArrayList<>();
     mImageRequester = new ImageRequester(this);
+
   }
 
   @Override
