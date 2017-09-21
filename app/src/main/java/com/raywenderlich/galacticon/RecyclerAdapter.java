@@ -25,6 +25,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.PhotoH
         // a list of references to the lifecycle of the object to allow the
         // ViewHolder to hang on to your ImageView and TextView, so it
         // doesn’t have to repeatedly query the same information.
+        // This is why we're using a recyclerview
         private ImageView mItemImage;
         private TextView mItemDate;
         private TextView mItemDescription;
@@ -37,7 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.PhotoH
         public PhotoHolder(View v) {
             super(v);
 
-            // TODO: Implment Butterknife
+            // TODO: Implement Butterknife
             mItemImage = (ImageView) v.findViewById(R.id.item_image);
             mItemDate = (TextView) v.findViewById(R.id.item_date);
             mItemDescription = (TextView) v.findViewById(R.id.item_description);
@@ -60,6 +61,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.PhotoH
     public RecyclerAdapter.PhotoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View inflatedView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recyclerview_item_row, parent, false);
+        Log.d("onCreateViewHolder: ", "Fired" );
         return new PhotoHolder(inflatedView);
     }
 
