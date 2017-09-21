@@ -4,6 +4,8 @@ package com.raywenderlich.galacticon;
  * Created by Guest on 9/21/17.
  */
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -31,7 +35,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.PhotoH
         private TextView mItemDescription;
         private Photo mPhoto;
 
-        // a key for easier reference to the particular item being used to launch your RecyclerView
+        // a key for easier reference.  Used as a Key name in an intent
         private static final String PHOTO_KEY = "PHOTO";
 
         // The Constructor
@@ -45,14 +49,36 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.PhotoH
             v.setOnClickListener(this);
         }
 
+        /**
+         * @param v the Clicked view
+         */
         @Override
         public void onClick(View v) {
             Log.d("RecyclerView", "CLICK on" + v.toString());
+            Context context = itemView.getContext();
+            Intent showPhotoIntent = new Intent(context, PhotoActivity.class);
+            showPhotoIntent.putExtra(PHOTO_KEY, mPhoto);
+            context.startActivity(showPhotoIntent);
         }
-    }
+
+        /**
+         * This method binds the photo object to the viewHolder
+         *
+         * @param photo The Photo object to be bound
+         */
+        public void bindPhoto(Photo photo) {
+            mPhoto = photo;
+            Picasso.with(mItemImage.getContext()).load(photo.getUrl()).into(mItemImage);
+            mItemDate.setText(photo.getHumanDate());
+            mItemDescription.setText(photo.getExplanation());
+        }
+    }  //end of viewHolder class
 
 
-    // The constructor
+    /**
+     *
+     * @param photos An ArrayList of photos
+     */
     public RecyclerAdapter(ArrayList<Photo> photos) {
         mPhotos = photos;
     }
@@ -67,7 +93,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.PhotoH
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.PhotoHolder holder, int position) {
-
+        Photo itemPhoto = mPhotos.get(position);
+        holder.bindPhoto(itemPhoto);
     }
 
     @Override

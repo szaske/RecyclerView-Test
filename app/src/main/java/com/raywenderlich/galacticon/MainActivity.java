@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
   private LinearLayoutManager mLinearLayoutManager; // This tracks what views are where in the Rview
   private ArrayList<Photo> mPhotosList; // What's being tracked
   private ImageRequester mImageRequester;
+  private RecyclerAdapter mAdapter; //The 'data source' for the recyclerview
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,8 +61,13 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
     mLinearLayoutManager = new LinearLayoutManager(this);
     mRecyclerView.setLayoutManager(mLinearLayoutManager);
 
-    mPhotosList = new ArrayList<>();
+    mPhotosList = new ArrayList<>(); // An empty arrayList for the items in your list
+    mAdapter = new RecyclerAdapter(mPhotosList);
+    mRecyclerView.setAdapter(mAdapter); //this attaches your empty list to the view
+
     mImageRequester = new ImageRequester(this);
+
+
 
   }
 
@@ -69,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
   protected void onStart() {
     super.onStart();
 
+    // Better get some content
+    if (mPhotosList.size() == 0) {
+      requestPhoto();
+    }
   }
 
   private void requestPhoto() {
@@ -86,7 +96,9 @@ public class MainActivity extends AppCompatActivity implements ImageRequester.Im
     runOnUiThread(new Runnable() {
       @Override
       public void run() {
-        mPhotosList.add(newPhoto);
+
+        mPhotosList.add(newPhoto); // This adds a new item to the list
+        mAdapter.notifyItemInserted(mPhotosList.size());  //This tells the adapter to reset and redraw
       }
     });
   }
